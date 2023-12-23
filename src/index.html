@@ -128,18 +128,27 @@
           </p>
           <form action="" class="flex flex-col gap-4">
             <input
+              id="email-input"
               type="email"
-              name="email"
               placeholder="Enter your email"
-              class="pl-4 py-[14px] w-full"
+              class="pl-4 py-[14px] w-full text-[#010101]"
             />
             <button
+              id="subscribe-button"
               type="submit"
               class="w-[180px] bg-primary text-[#010101] px-4 py-3 gap-2 flex justify-center items-center font-semibold"
             >
               Subscribe <i class="fa-solid fa-arrow-right"></i>
             </button>
           </form>
+          <script>
+            const emailInput = document.getElementById("email-input");
+            const subscribeButton = document.getElementById("subscribe-button");
+
+            subscribeButton.onclick = () => {
+              alert(emailInput.value);
+            };
+          </script>
         </div>
         <div class="flex flex-col gap-6 w-2/6">
           <h3 class="font-bold text-[32px]">Get in touch!</h3>
