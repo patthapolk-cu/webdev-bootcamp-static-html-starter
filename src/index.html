@@ -126,15 +126,14 @@
             bla.... bla bla bla.... bla bla bla.... bla bla bla.... I’m
             available for hiring.
           </p>
-          <form action="" class="flex flex-col gap-4">
+          <form onsubmit="onSubmit(event)" class="flex flex-col gap-4">
             <input
-              id="email-input"
+              name="email"
               type="email"
               placeholder="Enter your email"
               class="pl-4 py-[14px] w-full text-[#010101]"
             />
             <button
-              id="subscribe-button"
               type="submit"
               class="w-[180px] bg-primary text-[#010101] px-4 py-3 gap-2 flex justify-center items-center font-semibold"
             >
@@ -166,12 +165,9 @@
     </footer>
 
     <script>
-      const emailInput = document.getElementById("email-input");
-      const subscribeButton = document.getElementById("subscribe-button");
-
-      subscribeButton.onclick = () => {
-        alert(emailInput.value);
-      };
+      function onSubmit(e) {
+        alert("Thank you for subscribing! " + e.target.email.value);
+      }
     </script>
   </body>
 </html>
