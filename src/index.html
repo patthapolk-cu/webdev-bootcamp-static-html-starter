@@ -141,14 +141,6 @@
               Subscribe <i class="fa-solid fa-arrow-right"></i>
             </button>
           </form>
-          <script>
-            const emailInput = document.getElementById("email-input");
-            const subscribeButton = document.getElementById("subscribe-button");
-
-            subscribeButton.onclick = () => {
-              alert(emailInput.value);
-            };
-          </script>
         </div>
         <div class="flex flex-col gap-6 w-2/6">
           <h3 class="font-bold text-[32px]">Get in touch!</h3>
@@ -172,5 +164,14 @@
         </p>
       </section>
     </footer>
+
+    <script>
+      const emailInput = document.getElementById("email-input");
+      const subscribeButton = document.getElementById("subscribe-button");
+
+      subscribeButton.onclick = () => {
+        alert(emailInput.value);
+      };
+    </script>
   </body>
 </html>
